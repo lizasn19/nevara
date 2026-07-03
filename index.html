@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,40 +38,53 @@
         }
     </script>
     <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <!-- Lucide Icons (via unpkg CDN) -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <!-- Custom Style Animations -->
     <style>
         @keyframes spin-slow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
+
         .animate-spin-slow {
             animation: spin-slow 20s linear infinite;
         }
+
         .sleeve-transition {
             transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .torso-transition {
             transition: fill 0.5s ease;
         }
     </style>
 </head>
+
 <body class="bg-[#FFFDFE] text-slate-800 font-sans antialiased selection:bg-pink-100 selection:text-pink-950">
 
     <!-- Hidden SVG container declaring custom textile patterns (Batik & Stripes) -->
     <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <!-- Stripes Pattern Pink-White -->
-            <pattern id="stripesPatternPink" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <pattern id="stripesPatternPink" width="24" height="24" patternUnits="userSpaceOnUse"
+                patternTransform="rotate(45)">
                 <rect width="12" height="24" fill="#FFF1F2" />
                 <rect x="12" width="12" height="24" fill="#FFFFFF" />
                 <line x1="12" y1="0" x2="12" y2="24" stroke="#FFE4E6" stroke-width="1.5" />
             </pattern>
 
             <!-- Stripes Pattern Blue-White -->
-            <pattern id="stripesPatternBlue" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <pattern id="stripesPatternBlue" width="24" height="24" patternUnits="userSpaceOnUse"
+                patternTransform="rotate(45)">
                 <rect width="12" height="24" fill="#F0F9FF" />
                 <rect x="12" width="12" height="24" fill="#FFFFFF" />
                 <line x1="12" y1="0" x2="12" y2="24" stroke="#E0F2FE" stroke-width="1.5" />
@@ -80,16 +94,20 @@
             <pattern id="batikIbuPattern" width="80" height="80" patternUnits="userSpaceOnUse">
                 <rect width="80" height="80" fill="#FFEBF0" />
                 <!-- Abstract Mother Figure Drawing -->
-                <path d="M40,15 C45,15 48,22 45,28 C41,35 40,45 40,55 M40,28 C32,32 25,45 28,55 M40,28 C48,32 55,45 52,55" stroke="#EC4899" stroke-width="1.5" fill="none" opacity="0.5" />
+                <path
+                    d="M40,15 C45,15 48,22 45,28 C41,35 40,45 40,55 M40,28 C32,32 25,45 28,55 M40,28 C48,32 55,45 52,55"
+                    stroke="#EC4899" stroke-width="1.5" fill="none" opacity="0.5" />
                 <circle cx="40" cy="12" r="4" fill="#F59E0B" />
                 <!-- Traditional Damar Kurung lantern shape -->
-                <polygon points="15,25 25,20 35,25 35,45 15,45" stroke="#F43F5E" stroke-width="1" fill="#FEE2E2" opacity="0.6" />
+                <polygon points="15,25 25,20 35,25 35,45 15,45" stroke="#F43F5E" stroke-width="1" fill="#FEE2E2"
+                    opacity="0.6" />
                 <line x1="25" y1="20" x2="25" y2="10" stroke="#F43F5E" stroke-width="1" />
                 <!-- Small floral stars -->
                 <path d="M65,25 L70,20 L75,25 L70,30 Z" fill="#FBBF24" />
                 <path d="M15,60 L20,55 L25,60 L20,65 Z" fill="#FBBF24" />
                 <!-- Waves representing Jatim culture -->
-                <path d="M5,70 Q15,65 25,70 T45,70 T65,70 T85,70" stroke="#EC4899" stroke-width="1" fill="none" opacity="0.3" />
+                <path d="M5,70 Q15,65 25,70 T45,70 T65,70 T85,70" stroke="#EC4899" stroke-width="1" fill="none"
+                    opacity="0.3" />
             </pattern>
 
             <!-- Batik Pattern Kehidupan Pesisir (Sky Blue & Teal Accents) -->
@@ -99,8 +117,10 @@
                 <path d="M20,15 C25,5 35,10 30,25 C20,30 15,20 20,15 Z" fill="#0D9488" opacity="0.4" />
                 <path d="M15,25 C10,18 2,22 5,32 C12,40 18,30 15,25 Z" fill="#14B8A6" opacity="0.3" />
                 <!-- Sea waves -->
-                <path d="M0,45 Q15,35 30,45 T60,45 T90,45" stroke="#0284C7" stroke-width="1.5" fill="none" opacity="0.5" />
-                <path d="M0,55 Q15,45 30,55 T60,55 T90,55" stroke="#0369A1" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity="0.4" />
+                <path d="M0,45 Q15,35 30,45 T60,45 T90,45" stroke="#0284C7" stroke-width="1.5" fill="none"
+                    opacity="0.5" />
+                <path d="M0,55 Q15,45 30,55 T60,55 T90,55" stroke="#0369A1" stroke-width="1" stroke-dasharray="3 3"
+                    fill="none" opacity="0.4" />
                 <!-- Coastal Fishermen Boats -->
                 <path d="M50,25 L70,25 L75,32 L45,32 Z" fill="#38BDF8" opacity="0.7" />
                 <line x1="60" y1="25" x2="60" y2="15" stroke="#0369A1" stroke-width="1" />
@@ -117,26 +137,31 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo Brand with Pastel Accents -->
                 <div class="flex items-center gap-3">
-                    <div class="w-11 h-11 rounded-full bg-gradient-to-br from-rose-300 via-pink-400 to-sky-300 flex items-center justify-center text-white font-black text-xl shadow-md shadow-pink-100 animate-spin-slow">
-                        N
-                    </div>
+                    <img src="logonev.jpeg" alt="Nevara Logo" class="w-12 h-12 object-contain" />
                     <div>
-                        <span class="font-extrabold text-2xl tracking-wider text-slate-800 block leading-tight">NEVARA</span>
-                        <span class="text-[10px] text-pink-500 font-bold tracking-widest uppercase block">wear for more</span>
+                        <span
+                            class="font-extrabold text-2xl tracking-wider text-slate-800 block leading-tight">NEVARA</span>
+                        <span class="text-[10px] text-pink-500 font-bold tracking-widest uppercase block">wear for
+                            more</span>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation Links -->
                 <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                    <a href="#about" class="hover:text-pink-500 transition-all flex items-center gap-1"><i data-lucide="info" class="w-4 h-4"></i> Filosofi</a>
-                    <a href="#simulator" class="hover:text-pink-500 transition-all flex items-center gap-1"><i data-lucide="refresh-cw" class="w-4 h-4"></i> 4-in-1 Simulator</a>
-                    <a href="#sdg-impact" class="hover:text-sky-500 transition-all flex items-center gap-1"><i data-lucide="leaf" class="w-4 h-4"></i> SDG 12 & Limbah</a>
-                    <a href="#collections" class="hover:text-sky-500 transition-all flex items-center gap-1"><i data-lucide="award" class="w-4 h-4"></i> Koleksi Budaya</a>
+                    <a href="#about" class="hover:text-pink-500 transition-all flex items-center gap-1"><i
+                            data-lucide="info" class="w-4 h-4"></i> Filosofi</a>
+                    <a href="#simulator" class="hover:text-pink-500 transition-all flex items-center gap-1"><i
+                            data-lucide="refresh-cw" class="w-4 h-4"></i> 4-in-1 Simulator</a>
+                    <a href="#sdg-impact" class="hover:text-sky-500 transition-all flex items-center gap-1"><i
+                            data-lucide="leaf" class="w-4 h-4"></i> SDG 12 & Limbah</a>
+                    <a href="#collections" class="hover:text-sky-500 transition-all flex items-center gap-1"><i
+                            data-lucide="award" class="w-4 h-4"></i> Koleksi Budaya</a>
                 </div>
 
                 <!-- CTA Pre-Order Trigger -->
                 <div class="flex items-center gap-4">
-                    <a href="#preorder" class="bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-extrabold py-2.5 px-6 rounded-full text-xs shadow-lg shadow-rose-200 transition-all transform hover:scale-105">
+                    <a href="#preorder"
+                        class="bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white font-extrabold py-2.5 px-6 rounded-full text-xs shadow-lg shadow-rose-200 transition-all transform hover:scale-105">
                         PRE-ORDER NOW
                     </a>
                 </div>
@@ -151,19 +176,24 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
+
                 <!-- Left Content -->
                 <div class="lg:col-span-7 text-center lg:text-left space-y-6">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/60 text-pink-700 text-xs font-bold tracking-wide uppercase border border-pink-200/30">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/60 text-pink-700 text-xs font-bold tracking-wide uppercase border border-pink-200/30">
                         <i data-lucide="sparkles" class="w-4 h-4 text-rose-500"></i> PELOPOR FESYEN SIRKULAR INDONESIA
                     </div>
-                    
+
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-800 leading-tight">
-                        Satu Kemeja, <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-400 to-sky-400">4 Gaya Berbeda</span>
+                        Satu Kemeja, <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-rose-400 to-sky-400">4
+                            Gaya Berbeda</span>
                     </h1>
-                    
+
                     <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Paduan harmonis narasi tradisi <span class="font-bold text-pink-600">Batik Damar Kurung khas Jawa Timur</span>, keajaiban material serat daur ulang limbah tekstil, dan inovasi kancing magnetik modular. Kurangi konsumsi berlebih demi keselamatan bumi kita.
+                        Paduan harmonis narasi tradisi <span class="font-bold text-pink-600">Batik Damar Kurung khas
+                            Jawa Timur</span>, keajaiban material serat daur ulang limbah tekstil, dan inovasi kancing
+                        magnetik modular. Kurangi konsumsi berlebih demi keselamatan bumi kita.
                     </p>
 
                     <!-- Stat Boxes -->
@@ -184,10 +214,12 @@
 
                     <!-- CTAs -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#simulator" class="bg-slate-800 hover:bg-slate-900 text-white font-extrabold py-3.5 px-8 rounded-full shadow-lg transition-all flex items-center gap-2 text-sm">
+                        <a href="#simulator"
+                            class="bg-slate-800 hover:bg-slate-900 text-white font-extrabold py-3.5 px-8 rounded-full shadow-lg transition-all flex items-center gap-2 text-sm">
                             Mulai Simulasi 4-in-1 <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#sdg-impact" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-extrabold py-3.5 px-8 rounded-full border border-emerald-200/50 transition-all text-sm flex items-center gap-2">
+                        <a href="#sdg-impact"
+                            class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-extrabold py-3.5 px-8 rounded-full border border-emerald-200/50 transition-all text-sm flex items-center gap-2">
                             <i data-lucide="leaf" class="w-4 h-4 text-emerald-600"></i> Lihat Dampak Ekologis
                         </a>
                     </div>
@@ -195,18 +227,21 @@
 
                 <!-- Right Visualizer Highlight -->
                 <div class="lg:col-span-5">
-                    <div class="bg-white/80 p-6 rounded-3xl border border-pink-100/50 shadow-xl relative backdrop-blur-sm max-w-sm mx-auto">
-                        <div class="absolute -top-3 -right-3 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-extrabold text-[10px] px-3.5 py-1.5 rounded-full shadow">
+                    <div
+                        class="bg-white/80 p-6 rounded-3xl border border-pink-100/50 shadow-xl relative backdrop-blur-sm max-w-sm mx-auto">
+                        <div
+                            class="absolute -top-3 -right-3 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-extrabold text-[10px] px-3.5 py-1.5 rounded-full shadow">
                             RECYCLE FABRIC ♻️
                         </div>
 
                         <div class="text-center mb-4">
-                          <h3 class="font-extrabold text-slate-800 text-md">Ubah Penampilan Kemeja</h3>
-                          <p class="text-xs text-slate-400 mt-1">Gunakan panel kontrol di bawah kemeja ini</p>
+                            <h3 class="font-extrabold text-slate-800 text-md">Ubah Penampilan Kemeja</h3>
+                            <p class="text-xs text-slate-400 mt-1">Gunakan panel kontrol di bawah kemeja ini</p>
                         </div>
 
                         <!-- Render SVG Shirt Visualizer -->
-                        <div id="hero-shirt-container" class="relative w-full flex flex-col items-center justify-center">
+                        <div id="hero-shirt-container"
+                            class="relative w-full flex flex-col items-center justify-center">
                             <!-- Injected SVG Visualizer via JS -->
                         </div>
                     </div>
@@ -219,41 +254,54 @@
     <section id="about" class="py-20 bg-white border-t border-pink-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-extrabold text-pink-500 uppercase tracking-widest block">NARASI DI BALIK NEVARA</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-slate-800 mt-2">Dilahirkan Untuk Mengubah Masa Depan Fashion</h2>
+                <span class="text-xs font-extrabold text-pink-500 uppercase tracking-widest block">NARASI DI BALIK
+                    NEVARA</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-800 mt-2">Dilahirkan Untuk Mengubah Masa Depan
+                    Fashion</h2>
                 <p class="text-slate-500 mt-4 text-sm sm:text-base leading-relaxed">
-                    Didirikan oleh <span class="font-bold text-slate-700">Marsya Nefertiti Lubis</span> & <span class="font-bold text-slate-700">Syahquitta Faihamanda Yusuf</span>, NEVARA hadir menjawab keresahan darurat sampah industri pakaian (fast fashion) yang menghasilkan jutaan ton limbah merusak lingkungan.
+                    Didirikan oleh <span class="font-bold text-slate-700">Marsya Nefertiti Lubis</span> & <span
+                        class="font-bold text-slate-700">Syahquitta Faihamanda Yusuf</span>, NEVARA hadir menjawab
+                    keresahan darurat sampah industri pakaian (fast fashion) yang menghasilkan jutaan ton limbah merusak
+                    lingkungan.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-8 bg-pink-50/30 rounded-3xl border border-pink-100/50 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-pink-600 text-xl font-black">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-pink-100 flex items-center justify-center text-pink-600 text-xl font-black">
                         01
                     </div>
                     <h3 class="text-xl font-bold text-slate-800">Menekan Overconsumption</h3>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                        Sistem 4-in-1 modular kami memungkinkan 1 pakaian bertransformasi menjadi kemeja formal, kemeja kasual, vest bermotif, atau vest stripes. Anda menghemat lemari dan pengeluaran pakaian secara signifikan.
+                        Sistem 4-in-1 modular kami memungkinkan 1 pakaian bertransformasi menjadi kemeja formal, kemeja
+                        kasual, vest bermotif, atau vest stripes. Anda menghemat lemari dan pengeluaran pakaian secara
+                        signifikan.
                     </p>
                 </div>
 
                 <div class="p-8 bg-sky-50/30 rounded-3xl border border-sky-100/50 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600 text-xl font-black">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600 text-xl font-black">
                         02
                     </div>
                     <h3 class="text-xl font-bold text-slate-800">Bahan Baku Daur Ulang</h3>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                        Kami berkolaborasi dengan produsen inovatif **Pable** untuk mendaur ulang sisa-sisa kain perca katun dan polyester bekas menjadi bahan tenun premium yang siap pakai kembali tanpa pewarna kimia beracun.
+                        Kami berkolaborasi dengan produsen inovatif Pable untuk mendaur ulang sisa-sisa kain perca
+                        katun dan polyester bekas menjadi bahan tenun premium yang siap pakai kembali tanpa pewarna
+                        kimia beracun.
                     </p>
                 </div>
 
                 <div class="p-8 bg-emerald-50/30 rounded-3xl border border-emerald-100/50 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl font-black">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl font-black">
                         03
                     </div>
                     <h3 class="text-xl font-bold text-slate-800">Batik Damar Kurung Jatim</h3>
                     <p class="text-xs text-slate-500 leading-relaxed">
-                        Melestarikan kekayaan tradisi visual luhur Jawa Timur yang bercerita tentang kerja keras dan keindahan alam, menjadikannya relevan dan modis untuk generasi muda.
+                        Melestarikan kekayaan tradisi visual luhur Jawa Timur yang bercerita tentang kerja keras dan
+                        keindahan alam, menjadikannya relevan dan modis untuk generasi muda.
                     </p>
                 </div>
             </div>
@@ -263,21 +311,26 @@
     <!-- --- DYNAMIC INTERACTIVE SIMULATOR SECTION --- -->
     <section id="simulator" class="py-20 bg-slate-50 border-y border-pink-100/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-extrabold text-sky-500 uppercase tracking-widest block">PILIH GAYAMU SENDIRI</span>
+                <span class="text-xs font-extrabold text-sky-500 uppercase tracking-widest block">PILIH GAYAMU
+                    SENDIRI</span>
                 <h2 class="text-3xl font-black text-slate-800 mt-2">Interactive 4-in-1 Style Simulator</h2>
                 <p class="text-slate-500 mt-2 text-xs sm:text-sm">
-                    Sentuh dan klik kontrol di bawah ini untuk melihat bagaimana baju NEVARA berubah seketika. Rasakan inovasi kancing magnetik kami!
+                    Sentuh dan klik kontrol di bawah ini untuk melihat bagaimana baju NEVARA berubah seketika. Rasakan
+                    inovasi kancing magnetik kami!
                 </p>
             </div>
 
-            <div class="bg-white rounded-3xl border border-pink-100 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-                
+            <div
+                class="bg-white rounded-3xl border border-pink-100 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+
                 <!-- Visualizer Display Panel (Left) -->
-                <div class="lg:col-span-7 bg-gradient-to-br from-pink-50/30 to-sky-50/30 p-8 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-slate-100 relative">
+                <div
+                    class="lg:col-span-7 bg-gradient-to-br from-pink-50/30 to-sky-50/30 p-8 flex items-center justify-center border-b lg:border-b-0 lg:border-r border-slate-100 relative">
                     <!-- Toast Notification inside Canvas -->
-                    <div id="magnetic-toast" class="absolute top-8 z-20 scale-0 transition-transform duration-300 bg-gradient-to-r from-pink-500 to-sky-500 text-white font-extrabold px-5 py-2.5 rounded-full text-xs shadow-lg border border-white/20">
+                    <div id="magnetic-toast"
+                        class="absolute top-8 z-20 scale-0 transition-transform duration-300 bg-gradient-to-r from-pink-500 to-sky-500 text-white font-extrabold px-5 py-2.5 rounded-full text-xs shadow-lg border border-white/20">
                         🧲 MAGNET SNAPPED! Lengan Terkunci
                     </div>
                     <div class="w-full max-w-sm" id="simulator-shirt-container">
@@ -287,21 +340,25 @@
 
                 <!-- Customization Controls Panel (Right) -->
                 <div class="lg:col-span-5 p-8 flex flex-col justify-between space-y-8">
-                    
+
                     <!-- Step 1: Collection Selection -->
                     <div class="space-y-3">
                         <label class="block text-xs font-black uppercase tracking-wider text-slate-400">
                             Langkah 1: Pilih Makna Koleksi Budaya
                         </label>
                         <div class="grid grid-cols-2 gap-3">
-                            <button id="btn-col-ibu" onclick="setCollection('ibu')" class="p-4 rounded-2xl border text-left transition-all relative border-pink-300 bg-pink-50/40 ring-2 ring-pink-300">
+                            <button id="btn-col-ibu" onclick="setCollection('ibu')"
+                                class="p-4 rounded-2xl border text-left transition-all relative border-pink-300 bg-pink-50/40 ring-2 ring-pink-300">
                                 <span class="font-extrabold text-xs text-slate-800 block">🌸 Pegawean Ibu</span>
-                                <span class="text-[10px] text-slate-400 mt-1 line-clamp-2 leading-relaxed">Penghormatan kerja keras Ibu Jatim (Dominan Pink Pastel)</span>
+                                <span class="text-[10px] text-slate-400 mt-1 line-clamp-2 leading-relaxed">Penghormatan
+                                    kerja keras Ibu Jatim (Dominan Pink Pastel)</span>
                             </button>
 
-                            <button id="btn-col-pesisir" onclick="setCollection('pesisir')" class="p-4 rounded-2xl border text-left transition-all relative border-slate-200 hover:bg-slate-50">
+                            <button id="btn-col-pesisir" onclick="setCollection('pesisir')"
+                                class="p-4 rounded-2xl border text-left transition-all relative border-slate-200 hover:bg-slate-50">
                                 <span class="font-extrabold text-xs text-slate-800 block">🌊 Kehidupan Pesisir</span>
-                                <span class="text-[10px] text-slate-400 mt-1 line-clamp-2 leading-relaxed">Ekosistem mangrove & nelayan (Dominan Biru Langit)</span>
+                                <span class="text-[10px] text-slate-400 mt-1 line-clamp-2 leading-relaxed">Ekosistem
+                                    mangrove & nelayan (Dominan Biru Langit)</span>
                             </button>
                         </div>
                     </div>
@@ -311,28 +368,33 @@
                         <label class="block text-xs font-black uppercase tracking-wider text-slate-400">
                             Langkah 2: Tentukan Gaya & Struktur Pakaian
                         </label>
-                        
+
                         <div class="grid grid-cols-2 gap-3">
-                            <button id="btn-style-kemeja-batik" onclick="setStyle('kemeja-batik')" class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-800 text-white shadow">
+                            <button id="btn-style-kemeja-batik" onclick="setStyle('kemeja-batik')"
+                                class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-800 text-white shadow">
                                 👔 Kemeja Batik
                             </button>
 
-                            <button id="btn-style-kemeja-stripes" onclick="setStyle('kemeja-stripes')" class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-50 hover:bg-slate-100 text-slate-700">
+                            <button id="btn-style-kemeja-stripes" onclick="setStyle('kemeja-stripes')"
+                                class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-50 hover:bg-slate-100 text-slate-700">
                                 👔 Kemeja Stripes
                             </button>
 
-                            <button id="btn-style-vest-batik" onclick="setStyle('vest-batik')" class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-50 hover:bg-slate-100 text-slate-700">
+                            <button id="btn-style-vest-batik" onclick="setStyle('vest-batik')"
+                                class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-50 hover:bg-slate-100 text-slate-700">
                                 🎽 Vest Batik
                             </button>
 
-                            <button id="btn-style-vest-stripes" onclick="setStyle('vest-stripes')" class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-50 hover:bg-slate-100 text-slate-700">
+                            <button id="btn-style-vest-stripes" onclick="setStyle('vest-stripes')"
+                                class="py-3 rounded-xl border font-bold text-xs transition-all bg-slate-50 hover:bg-slate-100 text-slate-700">
                                 🎽 Vest Stripes
                             </button>
                         </div>
 
                         <!-- Sleeve detach control button with magnetic snap sound description -->
                         <div class="pt-2">
-                            <button onclick="toggleSleeves()" class="w-full py-3.5 px-4 rounded-2xl border border-dashed border-sky-300 bg-sky-50 hover:bg-sky-100/60 text-sky-900 font-extrabold text-xs transition-all flex items-center justify-center gap-2">
+                            <button onclick="toggleSleeves()"
+                                class="w-full py-3.5 px-4 rounded-2xl border border-dashed border-sky-300 bg-sky-50 hover:bg-sky-100/60 text-sky-900 font-extrabold text-xs transition-all flex items-center justify-center gap-2">
                                 <i data-lucide="refresh-cw" class="w-4 h-4"></i>
                                 <span id="sleeve-btn-text">Aksi Lengan Magnetik: Copot Lengan Baju</span>
                             </button>
@@ -341,12 +403,15 @@
 
                     <!-- Step 3: Interactive product description detail card -->
                     <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-pink-500 block">Keterangan Gaya Saat Ini</span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-pink-500 block">Keterangan
+                            Gaya Saat Ini</span>
                         <h4 id="style-title" class="font-extrabold text-sm text-slate-800 capitalize">
                             Kemeja Batik (Motif Seni Pegawean Ibu Jatim)
                         </h4>
                         <p id="style-desc" class="text-xs text-slate-500 leading-relaxed">
-                            Sisi luar terbuat dari katun hasil mechanical upcycling oleh Pable bermotif Batik Damar Kurung digital print ramah lingkungan. Dilengkapi lengan panjang katun bermagnet yang menutup rapat di bahu namun sangat mudah dilepas kapan saja.
+                            Sisi luar terbuat dari katun hasil mechanical upcycling oleh Pable bermotif Batik Damar
+                            Kurung digital print ramah lingkungan. Dilengkapi lengan panjang katun bermagnet yang
+                            menutup rapat di bahu namun sangat mudah dilepas kapan saja.
                         </p>
                     </div>
 
@@ -360,48 +425,61 @@
     <!-- --- SDG 12 & TEXTILE WASTE AWARENESS SECTION --- -->
     <section id="sdg-impact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
+
                 <!-- Visual Circular Economy Flow (Left) -->
                 <div class="lg:col-span-5 space-y-6">
-                    <div class="bg-gradient-to-tr from-pink-50 to-sky-50 rounded-3xl p-8 border border-pink-100/50 shadow-inner relative overflow-hidden">
+                    <div
+                        class="bg-gradient-to-tr from-pink-50 to-sky-50 rounded-3xl p-8 border border-pink-100/50 shadow-inner relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-24 h-24 bg-teal-100/40 rounded-full blur-xl"></div>
-                        
+
                         <h4 class="font-extrabold text-slate-800 text-lg mb-4 flex items-center gap-2">
                             <i data-lucide="leaf" class="text-emerald-500 w-5 h-5"></i> Alur Sirkular NEVARA
                         </h4>
 
                         <div class="space-y-6 text-xs">
                             <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-pink-200 text-pink-800 font-bold flex items-center justify-center flex-shrink-0">1</div>
+                                <div
+                                    class="w-6 h-6 rounded-full bg-pink-200 text-pink-800 font-bold flex items-center justify-center flex-shrink-0">
+                                    1</div>
                                 <div>
                                     <h5 class="font-extrabold text-slate-800 mb-0.5">Penyelamatan Limbah</h5>
-                                    <p class="text-slate-500">Kain katun & polyester sisa industri disortir dan dipilah dengan teliti.</p>
+                                    <p class="text-slate-500">Kain katun & polyester sisa industri disortir dan dipilah
+                                        dengan teliti.</p>
                                 </div>
                             </div>
 
                             <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-pink-200 text-pink-800 font-bold flex items-center justify-center flex-shrink-0">2</div>
+                                <div
+                                    class="w-6 h-6 rounded-full bg-pink-200 text-pink-800 font-bold flex items-center justify-center flex-shrink-0">
+                                    2</div>
                                 <div>
                                     <h5 class="font-extrabold text-slate-800 mb-0.5">Mechanical Upcycling (Pable)</h5>
-                                    <p class="text-slate-500">Diproses secara mekanis menjadi serat benang temun baru tanpa bahan kimia pencemar air.</p>
+                                    <p class="text-slate-500">Diproses secara mekanis menjadi serat benang temun baru
+                                        tanpa bahan kimia pencemar air.</p>
                                 </div>
                             </div>
 
                             <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-sky-200 text-sky-850 font-bold flex items-center justify-center flex-shrink-0">3</div>
+                                <div
+                                    class="w-6 h-6 rounded-full bg-sky-200 text-sky-850 font-bold flex items-center justify-center flex-shrink-0">
+                                    3</div>
                                 <div>
                                     <h5 class="font-extrabold text-slate-800 mb-0.5">Eco Digital Printing (PrintEx)</h5>
-                                    <p class="text-slate-500">Dicetak menggunakan tinta tersertifikasi Oeko-Tex dengan motif batik Damar Kurung Jatim.</p>
+                                    <p class="text-slate-500">Dicetak menggunakan tinta tersertifikasi Oeko-Tex dengan
+                                        motif batik Damar Kurung Jatim.</p>
                                 </div>
                             </div>
 
                             <div class="flex gap-3">
-                                <div class="w-6 h-6 rounded-full bg-emerald-200 text-emerald-850 font-bold flex items-center justify-center flex-shrink-0">4</div>
+                                <div
+                                    class="w-6 h-6 rounded-full bg-emerald-200 text-emerald-850 font-bold flex items-center justify-center flex-shrink-0">
+                                    4</div>
                                 <div>
                                     <h5 class="font-extrabold text-slate-800 mb-0.5">1 Shirt = 4 Styles (Konsumen)</h5>
-                                    <p class="text-slate-500">Masa pakai pakaian diperpanjang drastis, memutus rantai konsumsi berlebih mode cepat saji.</p>
+                                    <p class="text-slate-500">Masa pakai pakaian diperpanjang drastis, memutus rantai
+                                        konsumsi berlebih mode cepat saji.</p>
                                 </div>
                             </div>
                         </div>
@@ -410,23 +488,30 @@
 
                 <!-- Content Text explaining SDG 12 (Right) -->
                 <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs font-extrabold text-emerald-600 tracking-widest uppercase block">SDG 12: POLA KONSUMSI & PRODUKSI YANG BERTANGGUNG JAWAB</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-800">Menghidupkan Kembali Limbah Tekstil Menjadi Karya Seni Luhur</h2>
-                    
+                    <span class="text-xs font-extrabold text-emerald-600 tracking-widest uppercase block">SDG 12: POLA
+                        KONSUMSI & PRODUKSI YANG BERTANGGUNG JAWAB</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-800">Menghidupkan Kembali Limbah Tekstil
+                        Menjadi Karya Seni Luhur</h2>
+
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Di Indonesia, sekitar <span class="font-bold text-slate-850">2,3 juta ton limbah tekstil terbuang cuma-cuma di tahun 2021</span>. NEVARA bertekad menjadi bagian dari solusi dengan memanfaatkan bahan upcycle berkualitas tinggi berstandar ramah lingkungan bersama mitra **Pable Surabaya**.
+                        Di Indonesia, sekitar <span class="font-bold text-slate-850">2,3 juta ton limbah tekstil
+                            terbuang cuma-cuma di tahun 2021</span>. NEVARA bertekad menjadi bagian dari solusi dengan
+                        memanfaatkan bahan upcycle berkualitas tinggi berstandar ramah lingkungan bersama mitra Pable
+                        Surabaya.
                     </p>
 
                     <!-- Partnership callout boxes -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                         <div class="p-5 bg-pink-50/20 border border-pink-150 rounded-2xl">
                             <h4 class="font-extrabold text-slate-800 text-sm mb-1">Kolaborasi Pable, Surabaya</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed">Mitra pemrosesan limbah perca mekanis menjadi serat tenun katun daur ulang ramah kulit.</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Mitra pemrosesan limbah perca mekanis
+                                menjadi serat tenun katun daur ulang ramah kulit.</p>
                         </div>
 
                         <div class="p-5 bg-sky-50/20 border border-sky-150 rounded-2xl">
                             <h4 class="font-extrabold text-slate-800 text-sm mb-1">PrintEx Digital Printing</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed">Mencetak visual Damar Kurung presisi dengan tinta ramah lingkungan bebas racun logam.</p>
+                            <p class="text-xs text-slate-500 leading-relaxed">Mencetak visual Damar Kurung presisi
+                                dengan tinta ramah lingkungan bebas racun logam.</p>
                         </div>
                     </div>
 
@@ -438,7 +523,9 @@
                         <div>
                             <h4 class="font-extrabold text-sm">Prinsip 3P: People, Planet, Profit</h4>
                             <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                                Kami tidak hanya menjaga bumi (Planet) dan melestarikan budaya lokal, tapi juga melayani kebutuhan fungsional gaya hidup modern yang cerdas (People) serta membuka peluang industri sirkular yang menguntungkan (Profit).
+                                Kami tidak hanya menjaga bumi (Planet) dan melestarikan budaya lokal, tapi juga melayani
+                                kebutuhan fungsional gaya hidup modern yang cerdas (People) serta membuka peluang
+                                industri sirkular yang menguntungkan (Profit).
                             </p>
                         </div>
                     </div>
@@ -453,37 +540,34 @@
     <!-- --- SIMPLE GREEN IMPACT CALCULATOR --- -->
     <section id="eco-calculator" class="py-20 bg-slate-50 border-y border-pink-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="bg-gradient-to-r from-pink-400 via-rose-400 to-sky-400 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+
+            <div
+                class="bg-gradient-to-r from-pink-400 via-rose-400 to-sky-400 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
                 <div class="absolute -top-12 -right-12 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    
+
                     <!-- Input Slider -->
                     <div class="lg:col-span-6 space-y-4">
-                        <span class="text-[10px] font-black uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full inline-block">
+                        <span
+                            class="text-[10px] font-black uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full inline-block">
                             Kalkulator Dampak Hijau Sederhana
                         </span>
                         <h3 class="text-3xl font-black leading-tight">Hitung Kontribusi Hijau Anda</h3>
                         <p class="text-xs sm:text-sm text-pink-50 leading-relaxed">
-                          Cukup geser jumlah kemeja NEVARA yang ingin Anda miliki atau pesan, dan lihat berapa banyak limbah dan air yang berhasil kita hemat bersama-sama dari kerusakan iklim bumi.
+                            Cukup geser jumlah kemeja NEVARA yang ingin Anda miliki atau pesan, dan lihat berapa banyak
+                            limbah dan air yang berhasil kita hemat bersama-sama dari kerusakan iklim bumi.
                         </p>
 
                         <!-- Slider Control -->
                         <div class="space-y-2 pt-4">
                             <div class="flex justify-between items-center text-xs font-bold">
                                 <span>Jumlah Kemeja NEVARA:</span>
-                                <span class="bg-white text-pink-600 px-3 py-1 rounded-full text-sm font-black" id="slider-val-label">2 Pcs</span>
+                                <span class="bg-white text-pink-600 px-3 py-1 rounded-full text-sm font-black"
+                                    id="slider-val-label">2 Pcs</span>
                             </div>
-                            <input 
-                                type="range" 
-                                min="1" 
-                                max="10" 
-                                value="2" 
-                                id="eco-slider"
-                                oninput="onEcoSliderChange(this.value)"
-                                class="w-full accent-white cursor-pointer"
-                            />
+                            <input type="range" min="1" max="10" value="2" id="eco-slider"
+                                oninput="onEcoSliderChange(this.value)" class="w-full accent-white cursor-pointer" />
                             <div class="flex justify-between text-[10px] text-pink-100">
                                 <span>1 Kemeja</span>
                                 <span>10 Kemeja</span>
@@ -493,23 +577,33 @@
 
                     <!-- Dynamic Outputs -->
                     <div class="lg:col-span-6 grid grid-cols-2 gap-4">
-                        
-                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 text-center space-y-1">
+
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 text-center space-y-1">
                             <div class="text-3xl font-black text-white" id="eco-waste-saved">800 g</div>
-                            <h5 class="text-[10px] font-bold text-sky-100 uppercase tracking-widest">Limbah Tekstil Diselamatkan</h5>
-                            <p class="text-[9px] text-pink-100">Kain sisa perca katun tidak jadi berakhir di pembuangan sampah TPA.</p>
+                            <h5 class="text-[10px] font-bold text-sky-100 uppercase tracking-widest">Limbah Tekstil
+                                Diselamatkan</h5>
+                            <p class="text-[9px] text-pink-100">Kain sisa perca katun tidak jadi berakhir di pembuangan
+                                sampah TPA.</p>
                         </div>
 
-                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 text-center space-y-1">
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 text-center space-y-1">
                             <div class="text-3xl font-black text-white" id="eco-water-saved">5.400 L</div>
-                            <h5 class="text-[10px] font-bold text-sky-100 uppercase tracking-widest">Air Bersih Dihemat</h5>
-                            <p class="text-[9px] text-pink-100">Mengurangi ekstraksi pasokan air bersih yang biasa digunakan katun biasa.</p>
+                            <h5 class="text-[10px] font-bold text-sky-100 uppercase tracking-widest">Air Bersih Dihemat
+                            </h5>
+                            <p class="text-[9px] text-pink-100">Mengurangi ekstraksi pasokan air bersih yang biasa
+                                digunakan katun biasa.</p>
                         </div>
 
-                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 text-center space-y-1 col-span-2">
-                            <div class="text-2xl font-black text-white" id="eco-styles-count">8 Gaya Busana Berbeda</div>
-                            <h5 class="text-[10px] font-bold text-sky-100 uppercase tracking-widest">Total Outfit Tanpa Perlu Belanja Berlebih</h5>
-                            <p class="text-[9px] text-pink-100">Membantu mengurangi kebiasaan belanja fast fashion impulsif.</p>
+                        <div
+                            class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 text-center space-y-1 col-span-2">
+                            <div class="text-2xl font-black text-white" id="eco-styles-count">8 Gaya Busana Berbeda
+                            </div>
+                            <h5 class="text-[10px] font-bold text-sky-100 uppercase tracking-widest">Total Outfit Tanpa
+                                Perlu Belanja Berlebih</h5>
+                            <p class="text-[9px] text-pink-100">Membantu mengurangi kebiasaan belanja fast fashion
+                                impulsif.</p>
                         </div>
 
                     </div>
@@ -523,52 +617,66 @@
     <!-- --- DETAILED COLLECTIONS SECTION --- -->
     <section id="collections" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-extrabold text-pink-500 uppercase tracking-widest block">KOLEKSI WARISAN JATIM</span>
+                <span class="text-xs font-extrabold text-pink-500 uppercase tracking-widest block">KOLEKSI WARISAN
+                    JATIM</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-slate-800 mt-2">Dua Kisah Batik Damar Kurung</h2>
                 <p class="text-slate-500 mt-3 text-sm">
-                    Setiap goresan batik digital NEVARA menceritakan kisah filosofis luhur dan perjuangan keseimbangan hidup masyarakat Jawa Timur.
+                    Setiap goresan batik digital NEVARA menceritakan kisah filosofis luhur dan perjuangan keseimbangan
+                    hidup masyarakat Jawa Timur.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
+
                 <!-- Collection 1 -->
-                <div class="bg-gradient-to-b from-pink-50/50 to-white p-8 rounded-3xl border border-pink-100/40 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-b from-pink-50/50 to-white p-8 rounded-3xl border border-pink-100/40 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                     <div class="space-y-4">
-                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-xs font-bold uppercase">
+                        <div
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-xs font-bold uppercase">
                             🌸 Batik Seri 01
                         </div>
                         <h3 class="text-2xl font-black text-slate-800">Pegawean Ibu Jawa Timur</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                            Desain ini menyoroti peran para ibu di Jawa Timur yang aktif menyokong ekonomi keluarga dengan pekerjaan (*pagawean*) sehari-hari penuh kesabaran dan ketulusan. Mulai dari berdagang di pasar tradisional, merajut, hingga mengasuh keluarga. NEVARA mendedikasikan desain ini agar perjuangan ganda para ibu selalu mendapat apresiasi luhur.
+                            Desain ini menyoroti peran para ibu di Jawa Timur yang aktif menyokong ekonomi keluarga
+                            dengan pekerjaan (pagawean) sehari-hari penuh kesabaran dan ketulusan. Mulai dari
+                            berdagang di pasar tradisional, merajut, hingga mengasuh keluarga. NEVARA mendedikasikan
+                            desain ini agar perjuangan ganda para ibu selalu mendapat apresiasi luhur.
                         </p>
                     </div>
-                    
+
                     <div class="pt-4 border-t border-pink-100 flex items-center justify-between text-xs text-slate-400">
                         <span class="font-semibold text-pink-600">Dominan: Pink Pastel & Kuning Emas</span>
-                        <a href="#simulator" onclick="setCollection('ibu')" class="hover:text-pink-600 font-extrabold flex items-center gap-1 transition-colors">
+                        <a href="#simulator" onclick="setCollection('ibu')"
+                            class="hover:text-pink-600 font-extrabold flex items-center gap-1 transition-colors">
                             Gunakan Motif <i data-lucide="chevron-right" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Collection 2 -->
-                <div class="bg-gradient-to-b from-sky-50/50 to-white p-8 rounded-3xl border border-sky-100/40 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
+                <div
+                    class="bg-gradient-to-b from-sky-50/50 to-white p-8 rounded-3xl border border-sky-100/40 space-y-6 flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                     <div class="space-y-4">
-                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-850 text-xs font-bold uppercase">
+                        <div
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-100 text-sky-850 text-xs font-bold uppercase">
                             🌊 Batik Seri 02
                         </div>
                         <h3 class="text-2xl font-black text-slate-800">Kehidupan Pesisir Jawa Timur</h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                            Menyoroti keindahan pesisir Jawa Timur serta pentingnya menjaga ekosistem hutan bakau (mangrove) yang terancam punah. Desain memadukan kekayaan flora-fauna mangrove (bunga lindur, daun semanggi, udang) dengan visualisasi kehidupan nelayan tangguh sekitar pesisir. Menjadi pengingat pentingnya menyayangi alam pantai Jatim.
+                            Menyoroti keindahan pesisir Jawa Timur serta pentingnya menjaga ekosistem hutan bakau
+                            (mangrove) yang terancam punah. Desain memadukan kekayaan flora-fauna mangrove (bunga
+                            lindur, daun semanggi, udang) dengan visualisasi kehidupan nelayan tangguh sekitar pesisir.
+                            Menjadi pengingat pentingnya menyayangi alam pantai Jatim.
                         </p>
                     </div>
-                    
+
                     <div class="pt-4 border-t border-sky-100 flex items-center justify-between text-xs text-slate-400">
                         <span class="font-semibold text-sky-600">Dominan: Biru Langit & Hijau Toska</span>
-                        <a href="#simulator" onclick="setCollection('pesisir')" class="hover:text-sky-600 font-extrabold flex items-center gap-1 transition-colors">
+                        <a href="#simulator" onclick="setCollection('pesisir')"
+                            class="hover:text-sky-600 font-extrabold flex items-center gap-1 transition-colors">
                             Gunakan Motif <i data-lucide="chevron-right" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -582,12 +690,14 @@
     <!-- --- PRE-ORDER REGISTER FORM SECTION --- -->
     <section id="preorder" class="py-20 bg-white border-t border-slate-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            
+
             <div class="text-center space-y-3 mb-12">
-                <span class="text-xs font-extrabold text-pink-500 uppercase tracking-widest block">SAATNYA MEMULAI AKSI NYATA</span>
+                <span class="text-xs font-extrabold text-pink-500 uppercase tracking-widest block">SAATNYA MEMULAI AKSI
+                    NYATA</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-slate-800">Pre-Order Kemeja NEVARA</h2>
                 <p class="text-slate-500 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-                    Kami memproduksi pakaian secara eksklusif berbasis Pre-Order terbatas untuk meminimalkan sisa stok kain berlebih. Hubungi tim kami dengan mengisi form berikut!
+                    Kami memproduksi pakaian secara eksklusif berbasis Pre-Order terbatas untuk meminimalkan sisa stok
+                    kain berlebih. Hubungi tim kami dengan mengisi form berikut!
                 </p>
             </div>
 
@@ -595,53 +705,48 @@
                 <div class="absolute top-0 right-0 w-2 h-full bg-gradient-to-b from-pink-400 to-sky-400"></div>
 
                 <div id="form-success-container" class="hidden text-center py-10 space-y-4">
-                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce">
+                    <div
+                        class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl animate-bounce">
                         ✓
                     </div>
                     <h3 class="text-2xl font-black text-slate-800">Pemesanan Terkirim Berhasil!</h3>
                     <p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto leading-relaxed">
-                        Terima kasih banyak telah mendukung sustainable fashion NEVARA. Halaman ini sedang dialihkan secara otomatis ke nomor WhatsApp Admin kami untuk konfirmasi pembayaran.
+                        Terima kasih banyak telah mendukung sustainable fashion NEVARA. Halaman ini sedang dialihkan
+                        secara otomatis ke nomor WhatsApp Admin kami untuk konfirmasi pembayaran.
                     </p>
-                    <p class="text-[11px] text-slate-400 italic">Apabila tidak teralihkan, silakan hubungi tim kami di @styledbynevara</p>
+                    <p class="text-[11px] text-slate-400 italic">Apabila tidak teralihkan, silakan hubungi tim kami di
+                        @styledbynevara</p>
                 </div>
 
                 <form id="preorder-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                    
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Name Input -->
                         <div class="space-y-2">
-                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Nama Lengkap Anda</label>
-                            <input 
-                                type="text" 
-                                id="form-name"
-                                placeholder="Masukkan nama lengkap..."
+                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Nama Lengkap
+                                Anda</label>
+                            <input type="text" id="form-name" placeholder="Masukkan nama lengkap..."
                                 class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                                required
-                            />
+                                required />
                         </div>
 
                         <!-- WhatsApp Phone Input -->
                         <div class="space-y-2">
-                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Nomor WhatsApp Aktif</label>
-                            <input 
-                                type="tel" 
-                                id="form-phone"
-                                placeholder="Contoh: 08123456xxx"
+                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Nomor
+                                WhatsApp Aktif</label>
+                            <input type="tel" id="form-phone" placeholder="Contoh: 08123456xxx"
                                 class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                                required
-                            />
+                                required />
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <!-- Pilihan Motif -->
                         <div class="space-y-2">
-                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Pilihan Motif Budaya</label>
-                            <select 
-                                id="form-collection"
-                                onchange="setCollection(this.value)"
-                                class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                            >
+                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Pilihan
+                                Motif Budaya</label>
+                            <select id="form-collection" onchange="setCollection(this.value)"
+                                class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all">
                                 <option value="ibu">Pegawean Ibu (Pink Pastel)</option>
                                 <option value="pesisir">Kehidupan Pesisir (Biru Langit)</option>
                             </select>
@@ -649,11 +754,10 @@
 
                         <!-- Pilihan Ukuran -->
                         <div class="space-y-2">
-                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Ukuran Kemeja</label>
-                            <select 
-                                id="form-size"
-                                class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                            >
+                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Ukuran
+                                Kemeja</label>
+                            <select id="form-size"
+                                class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all">
                                 <option value="S">S (Lebar Dada: 48cm)</option>
                                 <option value="M" selected>M (Lebar Dada: 51cm)</option>
                                 <option value="L">L (Lebar Dada: 54cm)</option>
@@ -664,12 +768,10 @@
 
                         <!-- Pilihan Gaya Awal -->
                         <div class="space-y-2">
-                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Gaya Awal Favorit</label>
-                            <select 
-                                id="form-style"
-                                onchange="setStyle(this.value)"
-                                class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                            >
+                            <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Gaya Awal
+                                Favorit</label>
+                            <select id="form-style" onchange="setStyle(this.value)"
+                                class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs bg-white focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all">
                                 <option value="kemeja-batik" selected>Kemeja Batik</option>
                                 <option value="kemeja-stripes">Kemeja Stripes</option>
                                 <option value="vest-batik">Vest Batik</option>
@@ -679,19 +781,19 @@
                     </div>
 
                     <div class="space-y-2">
-                        <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Catatan Khusus (Opsional)</label>
-                        <textarea 
-                            id="form-notes"
-                            placeholder="Contoh: Kustomisasi panjang baju, ucapan kado, dll..."
+                        <label class="block text-xs font-black uppercase tracking-wider text-slate-600">Catatan Khusus
+                            (Opsional)</label>
+                        <textarea id="form-notes" placeholder="Contoh: Kustomisasi panjang baju, ucapan kado, dll..."
                             rows="3"
-                            class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                        ></textarea>
+                            class="w-full px-4 py-3 rounded-2xl border border-slate-200 text-xs focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"></textarea>
                     </div>
 
                     <!-- Pricing Summary -->
-                    <div class="p-5 bg-pink-50/20 border border-pink-100 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div
+                        class="p-5 bg-pink-50/20 border border-pink-100 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                         <div>
-                            <h5 class="font-extrabold text-xs text-slate-500 uppercase tracking-wider">Harga Penjualan Eksklusif</h5>
+                            <h5 class="font-extrabold text-xs text-slate-500 uppercase tracking-wider">Harga Penjualan
+                                Eksklusif</h5>
                             <div class="flex items-baseline gap-2 mt-1">
                                 <span class="text-3xl font-black text-pink-600">Rp465.000</span>
                                 <span class="text-xs text-slate-400 line-through">Rp499.000</span>
@@ -704,10 +806,8 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button 
-                        type="submit"
-                        class="w-full py-4 rounded-full bg-gradient-to-r from-pink-500 to-sky-400 hover:from-pink-600 hover:to-sky-500 text-white font-extrabold text-sm shadow-xl shadow-pink-100 transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2"
-                    >
+                    <button type="submit"
+                        class="w-full py-4 rounded-full bg-gradient-to-r from-pink-500 to-sky-400 hover:from-pink-600 hover:to-sky-500 text-white font-extrabold text-sm shadow-xl shadow-pink-100 transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2">
                         <i data-lucide="smartphone" class="w-5 h-5"></i> KIRIM PRE-ORDER VIA WHATSAPP ADMIN
                     </button>
 
@@ -721,18 +821,17 @@
     <!-- --- FOOTER SECTION --- -->
     <footer class="bg-slate-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
                 <!-- Branding -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-2">
-                        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-400 to-sky-400 flex items-center justify-center text-white font-black text-base">
-                            N
-                        </div>
+                        <img src="logo.jpg" alt="Nevara Logo" class="w-9 h-9 object-contain" />
                         <span class="font-extrabold text-xl tracking-wider text-white">NEVARA</span>
                     </div>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Inovasi busana lokal berkelanjutan yang memadukan pelestarian tradisi Jawa Timur dengan konsep ekonomi sirkular ramah lingkungan untuk masa depan cerah.
+                        Inovasi busana lokal berkelanjutan yang memadukan pelestarian tradisi Jawa Timur dengan konsep
+                        ekonomi sirkular ramah lingkungan untuk masa depan cerah.
                     </p>
                 </div>
 
@@ -741,9 +840,12 @@
                     <h4 class="font-extrabold text-xs uppercase tracking-widest text-pink-400">Navigasi Utama</h4>
                     <ul class="text-xs text-slate-400 space-y-2">
                         <li><a href="#about" class="hover:text-white transition-colors">Filosofi Brand</a></li>
-                        <li><a href="#simulator" class="hover:text-white transition-colors">Style Simulator 4-in-1</a></li>
-                        <li><a href="#sdg-impact" class="hover:text-white transition-colors">Pemanfaatan Limbah & SDG 12</a></li>
-                        <li><a href="#collections" class="hover:text-white transition-colors">Seri Karya Seni Batik</a></li>
+                        <li><a href="#simulator" class="hover:text-white transition-colors">Style Simulator 4-in-1</a>
+                        </li>
+                        <li><a href="#sdg-impact" class="hover:text-white transition-colors">Pemanfaatan Limbah & SDG
+                                12</a></li>
+                        <li><a href="#collections" class="hover:text-white transition-colors">Seri Karya Seni Batik</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -751,7 +853,8 @@
                 <div class="space-y-3">
                     <h4 class="font-extrabold text-xs uppercase tracking-widest text-sky-400">Target SDG 12</h4>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Mendukung target PBB dalam memastikan pola konsumsi dan produksi yang bertanggung jawab. Dibuat dengan cinta di Surabaya, Jawa Timur.
+                        Mendukung target PBB dalam memastikan pola konsumsi dan produksi yang bertanggung jawab. Dibuat
+                        dengan cinta di Surabaya, Jawa Timur.
                     </p>
                 </div>
 
@@ -759,22 +862,16 @@
                 <div class="space-y-3">
                     <h4 class="font-extrabold text-xs uppercase tracking-widest text-rose-400">Hubungi & Ikuti Kami</h4>
                     <p class="text-xs text-slate-400">E-mail: styledbynevara@gmail.com</p>
-                    
+
                     <div class="flex gap-4 pt-1">
-                        <a 
-                            href="https://www.instagram.com/styledbynevara" 
-                            target="_blank" 
+                        <a href="https://www.instagram.com/styledbynevara" target="_blank"
                             class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all text-sm"
-                            aria-label="Instagram"
-                        >
+                            aria-label="Instagram">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a 
-                            href="https://wa.me/628123456789" 
-                            target="_blank" 
+                        <a href="https://wa.me/628123456789" target="_blank"
                             class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-all text-sm"
-                            aria-label="WhatsApp"
-                        >
+                            aria-label="WhatsApp">
                             <i data-lucide="smartphone" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -782,7 +879,8 @@
 
             </div>
 
-            <div class="pt-8 text-center text-[10px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div
+                class="pt-8 text-center text-[10px] text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
                 <div>© 2026 NEVARA - styledbynevara. Hak Cipta Dilindungi Undang-Undang.</div>
                 <div class="flex gap-4">
                     <span class="hover:text-white cursor-pointer">Syarat & Ketentuan</span>
@@ -795,21 +893,20 @@
 
     <!-- --- INTEGRATED FREEFORM GEMINI CHATBOT WIDGET --- -->
     <div class="fixed bottom-6 right-6 z-50">
-        
+
         <!-- Toggle Chat Box Button -->
-        <button 
-            id="chat-toggle-btn"
-            onclick="toggleChatDrawer()"
-            class="w-14 h-14 rounded-full bg-gradient-to-tr from-pink-400 to-sky-400 text-white shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center relative border border-white/20"
-        >
+        <button id="chat-toggle-btn" onclick="toggleChatDrawer()"
+            class="w-14 h-14 rounded-full bg-gradient-to-tr from-pink-400 to-sky-400 text-white shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center relative border border-white/20">
             <i data-lucide="message-square" id="chat-icon-msg" class="w-6 h-6"></i>
             <i data-lucide="x" id="chat-icon-close" class="w-6 h-6 hidden"></i>
-            <span id="chat-badge" class="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white animate-ping"></span>
+            <span id="chat-badge"
+                class="absolute top-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white animate-ping"></span>
         </button>
 
         <!-- Chat Interface Drawer -->
-        <div id="chat-drawer" class="hidden absolute bottom-16 right-0 w-[360px] max-w-[calc(100vw-32px)] h-[480px] bg-white rounded-3xl border border-pink-100 shadow-2xl overflow-hidden flex flex-col justify-between animate-fade-in">
-            
+        <div id="chat-drawer"
+            class="hidden absolute bottom-16 right-0 w-[360px] max-w-[calc(100vw-32px)] h-[480px] bg-white rounded-3xl border border-pink-100 shadow-2xl overflow-hidden flex flex-col justify-between animate-fade-in">
+
             <!-- Header branding info -->
             <div class="bg-gradient-to-r from-pink-400 to-sky-400 p-4 text-white flex items-center justify-between">
                 <div class="flex items-center gap-3">
@@ -818,7 +915,8 @@
                     </div>
                     <div>
                         <h4 class="font-extrabold text-xs">Asisten Virtual NEVARA</h4>
-                        <span class="text-[9px] text-pink-50 font-bold tracking-widest uppercase block">Neva • Aktif Menerima Pertanyaan</span>
+                        <span class="text-[9px] text-pink-50 font-bold tracking-widest uppercase block">Neva • Aktif
+                            Menerima Pertanyaan</span>
                     </div>
                 </div>
                 <button onclick="toggleChatDrawer()" class="text-white hover:text-pink-100 transition-colors">
@@ -833,18 +931,12 @@
 
             <!-- Input Form for free-form questions -->
             <div class="p-3 bg-white border-t border-slate-100 flex gap-2">
-                <input 
-                    type="text" 
-                    id="chat-user-input"
-                    placeholder="Tanyakan bebas ke Neva..."
+                <input type="text" id="chat-user-input" placeholder="Tanyakan bebas ke Neva..."
                     onkeydown="if(event.key === 'Enter') sendChatMessage()"
-                    class="flex-1 px-4 py-2.5 rounded-2xl border border-slate-200 text-xs focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all"
-                />
-                <button 
-                    onclick="sendChatMessage()"
+                    class="flex-1 px-4 py-2.5 rounded-2xl border border-slate-200 text-xs focus:ring-2 focus:ring-pink-300 focus:outline-none transition-all" />
+                <button onclick="sendChatMessage()"
                     class="p-2.5 rounded-2xl bg-gradient-to-tr from-pink-400 to-sky-400 text-white hover:opacity-95 active:scale-95 transition-all shadow-md shadow-pink-100"
-                    aria-label="Send Message"
-                >
+                    aria-label="Send Message">
                     <i data-lucide="send" class="w-4 h-4"></i>
                 </button>
             </div>
@@ -859,6 +951,8 @@
         const state = {
             activeCollection: 'ibu', // 'ibu' | 'pesisir'
             activeStyle: 'kemeja-batik', // 'kemeja-batik' | 'kemeja-stripes' | 'vest-batik' | 'vest-stripes'
+            activeAngle: 'depan', // 'depan' | 'samping' | 'belakang' | 'whole'
+            isZoomed: false,
             isSleevesAttached: true,
             ecoShirtsCount: 2,
             isChatOpen: false,
@@ -880,7 +974,7 @@
         // Complete Premium Shirt SVG Builder function
         function buildShirtSVG(collection, styleType, isSleevesAttached) {
             const isBatik = styleType.includes('batik');
-            
+
             // Fills determination
             let torsoFill = '';
             if (isBatik) {
@@ -962,14 +1056,83 @@
         // Render both Shirt Visualizers (Hero + Simulator sections)
         function renderShirts() {
             const svgContent = buildShirtSVG(state.activeCollection, state.activeStyle, state.isSleevesAttached);
+
+            // Hero section remains 2D SVG
             document.getElementById('hero-shirt-container').innerHTML = svgContent;
-            document.getElementById('simulator-shirt-container').innerHTML = svgContent;
+
+            // Buttons for angles
+            let angles = [
+                { id: 'depan', label: 'Depan' },
+                { id: 'belakang', label: 'Belakang' }
+            ];
+
+            // Only vest-stripes pesisir has the 'Samping' and 'Utuh' angles
+            if (state.activeStyle === 'vest-stripes' && state.activeCollection === 'pesisir') {
+                angles = [
+                    { id: 'depan', label: 'Depan' },
+                    { id: 'samping', label: 'Samping' },
+                    { id: 'belakang', label: 'Belakang' },
+                    { id: 'whole', label: 'Utuh' }
+                ];
+            }
+
+            // Reset activeAngle if the current angle is no longer valid
+            if (!angles.find(a => a.id === state.activeAngle)) {
+                state.activeAngle = 'depan';
+            }
+
+            // Simulator section becomes 2D Image Slider
+            const collectionFileName = state.activeCollection === 'ibu' ? 'pegawean' : state.activeCollection;
+            const filename = `${state.activeStyle}-${collectionFileName}-${state.activeAngle}.png`;
+            let buttonsHTML = '<div class="flex flex-wrap justify-center gap-2 mt-4">';
+            angles.forEach(angle => {
+                const isActive = state.activeAngle === angle.id;
+                const activeClass = isActive ? 'bg-pink-500 text-white shadow-md shadow-pink-200' : 'bg-slate-100 text-slate-600 hover:bg-slate-200';
+                buttonsHTML += `<button onclick="setAngle('${angle.id}')" class="px-4 py-2 rounded-full text-xs font-bold transition-all ${activeClass}">${angle.label}</button>`;
+            });
+            buttonsHTML += '</div>';
+
+            const imgClasses = state.isZoomed ? "w-[200%] md:w-[250%] max-w-none h-auto cursor-zoom-out" : "w-full h-full object-contain cursor-zoom-in";
+            const containerClasses = state.isZoomed ? "overflow-auto items-start justify-start" : "overflow-hidden items-center justify-center";
+
+            const fallbackSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400"><rect width="400" height="400" fill="#f8fafc"/><text x="50%" y="45%" font-family="Inter, sans-serif" font-weight="bold" font-size="14" fill="#94a3b8" text-anchor="middle">Foto belum tersedia</text><text x="50%" y="55%" font-family="Inter, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Pastikan nama file:</text><text x="50%" y="65%" font-family="Inter, sans-serif" font-size="12" font-weight="bold" fill="#ed4879" text-anchor="middle">${filename}</text></svg>`;
+            const errorSrc = "data:image/svg+xml;base64," + btoa(fallbackSvg);
+
+            const sliderHTML = `
+                <div class="flex flex-col items-center w-full">
+                    <div class="w-full h-[400px] relative bg-slate-50/50 rounded-3xl border border-slate-100 overflow-hidden">
+                        
+                        <button onclick="toggleZoom()" class="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur rounded-full shadow-md flex items-center justify-center text-slate-700 hover:text-pink-500 hover:scale-110 transition-all z-20 border border-slate-100">
+                            <i data-lucide="${state.isZoomed ? 'zoom-out' : 'zoom-in'}" class="w-5 h-5"></i>
+                        </button>
+
+                        <div class="w-full h-full ${containerClasses} flex p-4 scroll-smooth">
+                            <img src="${filename}" alt="${state.activeStyle} ${state.activeAngle}" onclick="toggleZoom()" class="drop-shadow-xl transition-all duration-300 origin-top-left ${imgClasses}" onerror="this.onerror=null; this.src='${errorSrc}'" />
+                        </div>
+
+                    </div>
+                    ${buttonsHTML}
+                </div>
+            `;
+
+            document.getElementById('simulator-shirt-container').innerHTML = sliderHTML;
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function setAngle(angle) {
+            state.activeAngle = angle;
+            renderShirts();
+        }
+
+        function toggleZoom() {
+            state.isZoomed = !state.isZoomed;
+            renderShirts();
         }
 
         // Mutators and Controllers
         function setCollection(collectionName) {
             state.activeCollection = collectionName;
-            
+
             // Sync form select if exists
             document.getElementById('form-collection').value = collectionName;
 
@@ -991,7 +1154,7 @@
 
         function setStyle(styleName) {
             state.activeStyle = styleName;
-            
+
             // Sync form select if exists
             document.getElementById('form-style').value = styleName;
 
@@ -1021,7 +1184,7 @@
 
         function toggleSleeves() {
             state.isSleevesAttached = !state.isSleevesAttached;
-            
+
             // Sync current style name string
             if (state.isSleevesAttached) {
                 state.activeStyle = state.activeStyle.replace('vest', 'kemeja');
@@ -1035,10 +1198,10 @@
         function updateStyleDescription() {
             const titleEl = document.getElementById('style-title');
             const descEl = document.getElementById('style-desc');
-            
+
             const collText = state.activeCollection === 'ibu' ? 'Motif Seni Pegawean Ibu Jatim' : 'Motif Seni Kehidupan Pesisir Jatim';
             const cleanStyleText = state.activeStyle.replace('-', ' ').toUpperCase();
-            
+
             titleEl.innerText = `${cleanStyleText} (${collText})`;
 
             let desc = '';
@@ -1061,9 +1224,9 @@
         function triggerMagneticToast(isAttached) {
             const toast = document.getElementById('magnetic-toast');
             toast.innerText = isAttached ? '🧲 MAGNET SNAPPED! Lengan Terkunci' : '🔓 LENGAN DILEPAS! Menjadi Vest';
-            
+
             toast.className = "absolute top-8 z-20 scale-100 transition-transform duration-300 bg-gradient-to-r from-pink-500 to-sky-500 text-white font-extrabold px-5 py-2.5 rounded-full text-xs shadow-lg border border-white/20";
-            
+
             setTimeout(() => {
                 toast.className = "absolute top-8 z-20 scale-0 transition-transform duration-300 bg-gradient-to-r from-pink-500 to-sky-500 text-white font-extrabold px-5 py-2.5 rounded-full text-xs shadow-lg border border-white/20";
             }, 1200);
@@ -1096,7 +1259,7 @@
             document.getElementById('form-success-container').classList.remove('hidden');
 
             const waUrl = `https://wa.me/628123456789?text=${encodeURIComponent(message)}`;
-            
+
             setTimeout(() => {
                 window.open(waUrl, '_blank');
             }, 1500);
@@ -1130,18 +1293,17 @@
 
             state.chatHistory.forEach((msg, idx) => {
                 const isUser = msg.role === 'user';
-                
+
                 // Outer bubble wrapper
                 const msgWrapper = document.createElement('div');
                 msgWrapper.className = `flex flex-col ${isUser ? 'items-end' : 'items-start'}`;
 
                 // Inner text bubble
                 const bubble = document.createElement('div');
-                bubble.className = `max-w-[85%] rounded-2xl p-3 text-xs leading-relaxed ${
-                    isUser 
-                        ? 'bg-slate-800 text-white rounded-tr-none' 
-                        : 'bg-white text-slate-800 shadow-sm border border-pink-100/30 rounded-tl-none'
-                }`;
+                bubble.className = `max-w-[85%] rounded-2xl p-3 text-xs leading-relaxed ${isUser
+                    ? 'bg-slate-800 text-white rounded-tr-none'
+                    : 'bg-white text-slate-800 shadow-sm border border-pink-100/30 rounded-tl-none'
+                    }`;
 
                 // Parse newline formatting inside bubble
                 const formattedLines = msg.text.split('\n').map(line => `<span>${line}</span>`).join('<br>');
@@ -1152,7 +1314,7 @@
                 if (!isUser && msg.quickReplies && idx === state.chatHistory.length - 1) {
                     const quickRepliesContainer = document.createElement('div');
                     quickRepliesContainer.className = "mt-3 flex flex-wrap gap-1.5 justify-start max-w-full";
-                    
+
                     msg.quickReplies.forEach(qr => {
                         const qrBtn = document.createElement('button');
                         qrBtn.className = "text-[10px] bg-pink-50/60 hover:bg-pink-100/80 text-pink-700 font-extrabold py-1.5 px-3 rounded-full transition-all border border-pink-200/20 max-w-xs text-left";
@@ -1266,7 +1428,7 @@
         function showBotTypingIndicator(show) {
             const container = document.getElementById('chat-messages-container');
             const indicatorId = 'bot-typing-indicator';
-            
+
             // Clear old indicator if present
             const oldIndicator = document.getElementById(indicatorId);
             if (oldIndicator) oldIndicator.remove();
@@ -1286,13 +1448,14 @@
         }
 
         // Window load initializations
-        window.onload = function() {
+        window.onload = function () {
             // Replace and initialize dynamic lucide icons
             lucide.createIcons();
-            
+
             // Render initial SVG Shirts
             renderShirts();
         };
     </script>
 </body>
+
 </html>
